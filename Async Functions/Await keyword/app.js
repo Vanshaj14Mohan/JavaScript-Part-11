@@ -17,12 +17,14 @@ async function demo(){
 
 //Note: We can only use await keyword only in our async function. If we use it in a normal function, it will throw an error.
 
+//Fixing the callback hell code from previous session here.
 h2 = document.querySelector("h2");
 
 function changeColor(color, delay){ //nextColChange is basically a callback here.
     return new Promise((resolve, reject)=>{
         setTimeout(() =>{
             h2.style.color = color;
+            console.log(`Color changed to ${color}`);
             resolve("Color Changed");
         }, delay);
     });
@@ -33,7 +35,7 @@ async function color(){
     await changeColor("purple", 1000);
     await changeColor("blue", 1000);
     await changeColor("green", 1000);
-    await changeColor("orange", 1000);
+    changeColor("orange", 1000);
 }
 
 color();
