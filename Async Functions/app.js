@@ -13,5 +13,5 @@ greet()
     console.log("Promised was resolved");
 })
 .catch(()=>{
-    console.log("Promise was rejected with error", error);
+    console.log("Promise was rejected with error", error);//
 });
