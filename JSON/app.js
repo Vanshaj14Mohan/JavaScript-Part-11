@@ -2,6 +2,7 @@
 jsonRes = '{"fact":"Cats are North America\u2019s most popular pets: there are 73 million cats compared to 63 million dogs. Over 30% of households in North America own a cat.","length":149}'
 console.log(jsonRes);
 
+//Methods to access JSON Data
 //1-> JSON.parse -> To parse a string data into a JS Object
 valRes = JSON.parse(jsonRes);
 console.log(valRes.fact);
